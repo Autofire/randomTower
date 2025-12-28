@@ -22,27 +22,27 @@ TODO
 ### Chunk Selection 
 Currently not automated - this must be done manually.
 
-
-### Chunk Copying
-TODO
-
 To select chunks, light up the TOP light on each of the chunk layouts you wish
 to use. This will "prime" them for copying.
+
+
+### Chunk Copying
 
 Once enough chunks are selected to fill the row, the copying process will
 then immediately begin.
 
 #### Elements
- * **Read Spawner (Idle)**: This marks the start of a row of elements within a
-   chunk. Doesn't do anything, but can be swapped to a **Read Spawner
-(Primed)** by pressing on the top-most spawner within a chunk. In the future,
-this will also occur when the automated chunk selection system picks a chunk.
+ * **Read Spawner (Idle)**:
+   * This marks the start of a row of elements within a chunk.
+   * Doesn't do anything, but can be swapped to a **Read Spawner (Primed)** by pressing on the top-most spawner within a chunk.
+   * In the future, this will also occur when the automated chunk selection system picks a chunk.
 
- * **Read Spawner (Primed)**: Once primed, a read spawner will wait until its CE value drops to zero - which happens naturally once enough other readers are primed. Once that happens, it will do the following:
-
-   1. Create a **Read Head**.
-   2. Prime the **Read Spawner** below itself.
-   3. Become idle.
+ * **Read Spawner (Primed)**:
+   * Once primed, a read spawner will wait until its CE value drops to zero - which happens naturally once enough other readers are primed.
+   * Once that happens, it will do the following:
+     1. Create a **Read Head**.
+     2. Prime the **Read Spawner** below itself.
+     3. Become idle.
 
 
 #### Variables
